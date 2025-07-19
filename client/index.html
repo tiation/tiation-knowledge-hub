@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tiation Knowledge Hub</title>
+    <meta name="description" content="Enterprise knowledge management system with multi-tenant support" />
+    <meta name="keywords" content="knowledge management, enterprise, multi-tenant, AI, Q&A" />
+    <meta name="author" content="Tiation" />
+    
+    <!-- OpenGraph Meta Tags -->
+    <meta property="og:title" content="Tiation Knowledge Hub" />
+    <meta property="og:description" content="Enterprise knowledge management system with multi-tenant support" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tiation-knowledge-hub.vercel.app" />
+    <meta property="og:image" content="/og-image.png" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@tiation" />
+    <meta name="twitter:title" content="Tiation Knowledge Hub" />
+    <meta name="twitter:description" content="Enterprise knowledge management system with multi-tenant support" />
+    <meta name="twitter:image" content="/twitter-image.png" />
+    
+    <!-- Preconnect to improve loading performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    
+    <style>
+      /* Loading screen styles */
+      .loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #1976d2 0%, #42a5f5 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+      }
+      
+      .loading-spinner {
+        width: 40px;
+        height: 40px;
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        border-top: 4px solid white;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-right: 16px;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      .loading-text {
+        font-size: 18px;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <!-- Loading screen shown until React app loads -->
+      <div class="loading-screen">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Loading Tiation Knowledge Hub...</div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
